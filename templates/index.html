@@ -1,0 +1,82 @@
+<html>
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+    .desc{
+        color: #40916C;
+    }
+
+    .cards{
+        border: 3px solid #B7E4C7;
+        width: 400px;
+        height: 380px;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 45px;
+        margin-top: 25px;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .cards p{
+        text-align: justify;
+    }
+
+    .plant{
+        height: 212px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="title"><b>Disease Detector</b></h1>
+    <p class="slogan"><b>Let our AI Engine help you detect if your plant is healthy</b></p>
+    <br>
+    <p class="desc"><b>Upload an image of the plant's leaf that you suspect may be affected by a disease.</b></p>
+</div>
+
+<center>
+    <div class="cards">
+        <h5>Why is it important?</h5>
+        <br>
+        <p>
+            Early detection of plant diseases enables prompt action, preventing their spread and minimizing damage. It allows for targeted management strategies, reducing the risk of crop losses through appropriate treatments. Detecting diseases early optimizes plant yield and facilitates preventive measures like selecting resistant plant varieties and implementing preventative practices. By minimizing economic losses and protecting livelihoods, early detection and management contribute to agricultural productivity, trade, and food security.
+        </p>
+    </div>
+    
+    <div class="cards">
+        <center>
+            <img class="plant" src="https://media.istockphoto.com/id/1278906674/photo/monstera-in-a-pot-isolated-on-white-background-close-up-of-tropical-leaves-or-houseplant-that.jpg?s=170667a&w=0&k=20&c=ModkGR0c2Nl3JsE2ixoUwQmaP_u0gw1Cq0tq_SFTKXQ=">
+    
+            <form action="/submit" method="POST" enctype="multipart/form-data">
+                <div class="custom-file overflow-hidden mb-3">
+                    <input class="input" type="file" id="actual-btn" hidden name="image" />
+                    <label class="label" for="actual-btn">Choose File</label><br>
+                    <span id="file-chosen">No file chosen</span>
+                </div>
+                <a class="mx-2">
+                    <button type="submit" class="btn btn-outline-success mb-3">Submit</button>
+                </a>
+            </form>
+            </center>
+    </div>
+    
+    <div class="cards">
+        <h5>How to avoid infestation?</h5>
+        <br>
+        <p>
+            To effectively avoid infestations in your plants, it is essential to prioritize plant health. This can be done by maintaining plant health through proper nutrition, watering, and sunlight. Choose resistant plant varieties, practice crop rotation, and remove plant debris and weeds to prevent pest and disease buildup. Provide adequate spacing between plants, apply organic mulch, and monitor regularly for signs of pests or diseases. Adopt integrated pest management strategies, encourage beneficial insects, and clean gardening tools to prevent the spread of pests and diseases.
+        </p>
+    </div>
+</center>
+<br><br><br>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+    const fileChosen = document.getElementById('file-chosen');
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}

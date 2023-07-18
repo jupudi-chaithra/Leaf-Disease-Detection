@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+    .desc {
+        color: #40916C;
+    }
+
+    .cards {
+        border: 3px solid #B7E4C7;
+        width: 300px;
+        height: 95%;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 45px;
+        margin-top: 25px;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    button{
+        background-color: #40916C;
+        padding: 5px;
+        border-radius: 3px;
+        color: white;
+        border: none;
+        width: 100px;
+        text-overflow: ellipsis;
+    }
+
+    button:hover{
+        background-color: white;
+        color: #40916C;
+        border: #40916C 1px solid;
+    }
+
+</style>
+
+<div class="text-center">
+    <h1 class="title"><b>Supplements</b></h1>
+    <p class="slogan"><b>Supplements and fertilizers boost nutrients, correct deficiencies, enhance plant health, and increase yield.</b></p>
+    <br>
+    <p class="desc"><b>Choose the product you want to buy</b></p>
+</div>
+
+<center>
+    {% for index in range(0,supplement_name | length) %}
+    {% if index != 4 %}
+    <div class="cards">
+        <center>
+            {% if index==3 or index==5 or index==7 or index==11 or index==15 or index==18 or index==20 or index==23 or
+            index==24 or index==25 or index==28 or index==38 %}
+                <h5>Fertilizer<b style="color: green;"> (Healthy):</b></h5>
+            {% else %}
+                <h5>Supplements<b style="color: red;"> (Diseased):</b></h5>
+            {% endif %}
+            <br>
+            <img src={{supplement_image[index]}} width="200" height="250">
+            <br><br>
+            <h6>For {{disease[index]}}</h6>
+            <p>{{supplement_name[index]}}</p>
+    
+            <a target="_blank" href={{buy[index]}}>
+                <button type="button">Buy Product</button>
+            </a>
+        </center>
+    </div>
+    {% endif %}
+    {% endfor %}
+</center>
+<br><br><br>
+
+{% endblock body %}

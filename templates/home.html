@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+    .card-group{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+    
+    .feature{
+        width: 280px;
+    }
+
+    h5{
+        font-weight: 400;
+    }
+
+    .icon{
+        width: 40%;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="title"><b>Green Diagnose</b></h1>
+    <p class="slogan"><b>Improving Plant Health through Early Detection and Intervention</b></p>
+
+    <br>
+    <p class="slogan"><b>Detect. Diagnose. Thrive</b></p>
+    <img src='https://svgshare.com/i/uV3.svg' width="25%" />
+    
+
+    <div class="card-group mt-5">
+        <div class="feature">
+            <img class="icon" src="https://i.ibb.co/K2Bvt6c/magnifying-glass.png">
+            <h5 class="mt-3">Accurate disease identification</h5>
+        </div>
+        <div class="feature">
+            <img class="icon" src="https://i.ibb.co/mFg2zdV/fertilizer.png">
+            <h5 class="mt-3">Recommended treatments</h5>
+        </div>
+        <div class="feature">
+            <img class="icon" src="https://i.ibb.co/r7M70pP/idea.png">
+            <h5 class="mt-3">Prevention strategies</h5>
+        </div>
+    </div>
+    <br><br><br>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+  .card1{
+    width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .row2{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .card2{
+    width: 460px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: justify;
+  }
+
+</style>
+
+<div class="text-center">
+  {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or pred==24 or pred==25 or pred==28 or pred==38 %}
+    <h1 class="slogan" style="font-size: 45px;"><b>Healthy {{title}}</b></h1>
+  {% else %}
+    <h1 class="slogan text-danger" style="font-size: 45px;"><b>Diseased {{title}}</b></h1>
+  {% endif %}
+  <br>
+  <img src={{image_url}} width="350" height="350">
+</div>
+
+<br><br>
+
+<center>
+  <div class="card1">
+    <h5 class="text-center"><b>
+      {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or pred==24 or pred==25 or pred==28 or pred==38 %}
+        Here are some pointers for cultivating thriving and healthy plants
+      {% else %}
+        Description
+      {% endif %}
+    </b></h5>
+    <p><br>{{desc}}</p>
+  </div>
+</center>
+
+<br>
+
+<center>
+  <div class="row2">
+    <div class="card2">
+      <h5 class="text-center"><b>
+        {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or pred==24 or pred==25 or pred==28 or pred==38 %}
+          Benefits
+        {% else %}
+          Prevent this disease with these steps
+        {% endif %}
+        
+      </b></h5>
+      <p><br>{{prevent}}</p>
+    </div>
+  
+    {% if pred!=4 %}
+    <div class="card2">
+      <center>
+        <h5 class="text-center"><b>
+          {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or pred==24 or pred==25 or pred==28 or pred==38 %}
+            Fertilizer
+          {% else %}
+            Supplements
+          {% endif %}
+        </b></h5>
+        <br>
+        <img src={{simage}} width="150" height="200">
+        <br><br>
+        <h6>{{sname}}</h6>
+        <a target="_blank" href={{buy_link}}>
+          <button class="btn text-white" style="background-color: #40916C;">Buy Product</button>
+        </a>
+      </center>
+    </div>
+    {% endif %}
+  </div>
+</center>
+<br><br><br>
+
+{% endblock body %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+    .team-body{
+        display: flex;
+        gap: 45px;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: 25px;
+    }
+
+    .person{
+        width: 150px;
+        height: 150px;
+        border-radius: 500px;
+    }
+
+    .person-head{
+        width: 300px;
+        background-image: url(https://i.ibb.co/3pkxqyP/Background.png);
+    }
+
+    .person-body{
+        width: 300px;
+    }
+
+    .name{
+        padding-top: 70px;
+    }
+</style>
+
+<h1 class="title text-center"><b>Our Team</b></h1>
+<div class="team-body">
+    <div class="person-body">
+        <img src="https://i.ibb.co/3pkxqyP/Background.png" width="300px" height="180px">
+        <center>
+            <img style="position: absolute; top: 300px; left: 165px;" class="person" src="https://i.ibb.co/tpNKVJC/Meghana.png" alt="Meghana">
+        </center>
+        <center class="bg-white">
+            <h5 class="name">Meghana</h5>
+            <a target="_blank" href="https://www.linkedin.com/in/meghana-ganji-728161202/"><img class="mt-2 mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1200px-LinkedIn_icon_circle.svg.png" width="30px"></a>
+            <a target="_blank" href="mailto: meghana2049@gmail.com"><img class="ms-3 mt-2 mb-3" src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" width="30px"></a>
+        </center>
+    </div>
+    <div class="person-body">
+        <center>
+            <img src="https://i.ibb.co/3pkxqyP/Background.png" width="300px" height="180px">
+            <img style="position: absolute; top: 300px; left: 512px;" class="person" src="https://i.ibb.co/qFJY1Tx/Anusha.png" alt="Anusha">
+        </center>
+        <center class="bg-white">
+            <h5 class="name">Anusha</h5>
+            <a target="_blank" href="https://www.linkedin.com/in/anusha-gurram-970b2a223/"><img class="mt-2 mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1200px-LinkedIn_icon_circle.svg.png" width="30px"></a>
+            <a target="_blank" href="mailto: anusha29smiley@gmail.com"><img class="ms-3 mt-2 mb-3" src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" width="30px"></a>       
+        </center>
+    </div>
+    <div class="person-body">
+        <img src="https://i.ibb.co/3pkxqyP/Background.png" width="300px" height="180px">
+        <center>
+            <img style="position: absolute; top: 300px; left: 860px;" class="person" src="https://i.ibb.co/xjdgpGX/Chaithra.png" alt="Chaithra">
+        </center>
+        <center class="bg-white">
+            <h5 class="name">Chaithra</h5>
+            <a target="_blank" href="https://www.linkedin.com/in/chaithra-jupudi-371179223/"><img class="mt-2 mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1200px-LinkedIn_icon_circle.svg.png" width="30px"></a>
+            <a target="_blank" href="mailto: chaithra.jupudi@gmail.com"><img class="ms-3 mt-2 mb-3" src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" width="30px"></a>
+        </center>
+    </div>
+    <div class="person-body">
+        <img src="https://i.ibb.co/3pkxqyP/Background.png" width="300px" height="180px">
+        <center>
+            <img style="position: absolute; top: 300px; left: 1205px;" class="person" src="https://i.ibb.co/1fnSzxy/Srinidhi.png" alt="Srinidhi">
+        </center>
+        <center class="bg-white">
+            <h5 class="name">Srinidhi</h5>
+            <a target="_blank" href="https://www.linkedin.com/in/madanaboina-srinidhi-b50356238/"><img class="mt-2 mb-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1200px-LinkedIn_icon_circle.svg.png" width="30px"></a>
+            <a target="_blank" href="mailto: madanaboinasrinidhi@gmail.com"><img class="ms-3 mt-2 mb-3" src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" width="30px"></a>
+        </center>
+    </div>
+</div>
+
+{% endblock body %}

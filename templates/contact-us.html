@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<style>
+    .body{
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+        gap: 45px;
+    }
+
+    .image{
+        width: 35%;
+    }
+    
+    form{
+        width: 400px;
+    }
+
+    .link{
+        display: block;
+        text-align: center;
+        background-color: #40916C;
+        padding: 5px;
+        border-radius: 3px;
+        color: white;
+        border: none;
+        width: 345px;
+        text-overflow: ellipsis;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+    .link:hover{
+        color: white;
+    }
+
+    input{
+        margin-bottom: 10px;
+    }
+
+    form{
+        padding: 25px;
+        border: 3px solid #B7E4C7;
+    }
+
+</style>
+
+<div class="text-center">
+    <h1 class="title"><b>Contact Us</b></h1>
+    <p class="slogan"><b>Contact us for any inquiries or suggestions - we are here to assist you with pleasure</b></p>
+</div>
+
+<div class="body">
+    <img class="image" src='https://svgshare.com/i/uPE.svg'/>
+    <div>
+        <form id="contact">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" class="form-control" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" class="form-control" id="subject">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+            </div>
+
+            <a target="_blank" class="link" id="mailTo" href = "mailto: green.diagnose@gmail.com" onclick="send()">Submit</a>
+        </form>
+    </div>
+</div>
+
+<script>
+    function send(){
+        name = document.getElementById("name").value;
+        phone = document.getElementById("phone").value;
+        subject = document.getElementById("subject").value;
+        message = document.getElementById("message").value;
+        var href =  $("#mailTo").attr('href');
+        var newHref = "mailto: green.diagnose@gmail.com?subject=" + subject + "&body=" + "Name: " + name + "%0D%0APhone: " + phone + "%0D%0AMessage:%0D%0A" + message;
+        $("#mailTo").attr("href", newHref)
+        document.getElementById("contact").reset();
+    }
+</script>
+<br><br><br>
+{% endblock body %}
